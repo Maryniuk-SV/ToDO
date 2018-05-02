@@ -1,0 +1,19 @@
+<form 
+class="todo-form"
+(ngSubmit)="onSubmit(); todoForm.reset()"
+#todoForm="ngForm"
+>
+<input 
+  type="text"
+  placeholder="Що потрібно зробити?"
+  required
+  name="title"
+  [(ngModel)]="title"
+>
+<button
+type="submit"
+[disabled]="todoForm.form.invalid"
+>
+  Додати
+</button>
+</form>
